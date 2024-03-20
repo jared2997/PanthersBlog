@@ -84,14 +84,31 @@
        </section>
 
        <!-- Sidebar Section -->
+       <!-- Sidebar Section -->
        <aside class="w-full md:w-1/3 flex flex-col items-center px-3">
-           <div class="w-full bg-white shadow flex flex-col my-4 p-6">
-               <p class="text-xl font-semibold pb-5">About Us</p>
-               <a href="About.html" class="w-full bg-sky-600 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-4">
-                   Get to know us
-               </a>
-           </div>
-       </aside>
+        <div class="w-full bg-white shadow flex flex-col my-4 p-6">
+            <p class="text-xl font-semibold pb-5">Add Your Email to Sign Up for our Newsletter!</p>
+            <input class="border-black p-3" placeholder="Add Email" type="text" id="inputField">
+            <button class="w-full bg-sky-600 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-4" type="submit" id="saveButton" onclick="">Add Email</button>
+        </div>
+
+        <script>
+         document.getElementById('saveButton').addEventListener('click', function() {
+             // Retrieve the value of the input field
+             var inputValue = document.getElementById('inputField').value;
+             
+             // Do whatever you want with the input value
+             console.log("Input value:", inputValue);
+              // Add a message to the message div
+              var messageDiv = document.getElementById('message');
+              messageDiv.textContent = 'Input value saved: ' + inputValue;
+ 
+             // Clear the input field
+             document.getElementById('inputField').value = '';
+         });
+         </script>
+
+        </aside>
    </div>
 
    <footer class="w-full border-t bg-white pb-12">
