@@ -152,7 +152,7 @@
            <div class="w-full bg-white shadow flex flex-col my-4 p-6">
                <p class="text-xl font-semibold pb-5">Add Your Email to Sign Up for our Newsletter!</p>
                <input class="border-black p-3" placeholder="Add Email" type="text" id="inputField">
-               <button class="w-full bg-sky-600 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-4" id="saveButton" onclick="">Add Email</button>
+               <button class="w-full bg-sky-600 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-4" type="submit" id="saveButton" onclick="">Add Email</button>
            </div>
 
            <script>
@@ -162,9 +162,12 @@
                 
                 // Do whatever you want with the input value
                 console.log("Input value:", inputValue);
-                // Or you can save it to local storage or send it to a server, etc.
-                // localStorage.setItem('savedValue', inputValue);
-                // SendToServer(inputValue);
+                 // Add a message to the message div
+                 var messageDiv = document.getElementById('message');
+                 messageDiv.textContent = 'Input value saved: ' + inputValue;
+    
+                // Clear the input field
+                document.getElementById('inputField').value = '';
             });
             </script>
 
